@@ -14,11 +14,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import nl.dionsegijn.konfetti.compose.KonfettiView
-import nl.dionsegijn.konfetti.compose.models.Party
-import nl.dionsegijn.konfetti.compose.models.Emitter
-import nl.dionsegijn.konfetti.compose.models.Position
-import java.util.concurrent.TimeUnit
 import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.TextStyle
@@ -106,53 +101,47 @@ private fun DayCell(info: DayInfo, onClick: () -> Unit) {
 @Composable
 fun DayDetailBottomSheet(info: DayInfo, onDismiss: () -> Unit) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val routines = remember(info) { info.routines }
+    val dayCompleted by remember {
+        derivedStateOf { routines.isNotEmpty() && routines.all { it.completed } }
+    }
     ModalBottomSheet(onDismissRequest = onDismiss, sheetState = sheetState) {
-        Column(Modifier.fillMaxWidth().padding(16.dp)) {
-            Text("${info.date}", fontWeight = FontWeight.Bold)
-            val routines = remember(info) { info.routines }
-            routines.forEach { routine ->
-                val dismissState = rememberDismissState(
-                    confirmValueChange = {
-                        if (it == DismissValue.DismissedToStart) {
-                            routines.remove(routine)
-                            true
-                        } else false
-                    }
-                )
-                SwipeToDismiss(
-                    state = dismissState,
-                    background = {},
-                    dismissContent = {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.fillMaxWidth().padding(4.dp)
-                        ) {
-                            Checkbox(
-                                checked = routine.completed,
-                                onCheckedChange = { checked -> routine.completed = checked }
-                            )
-                            Spacer(Modifier.width(8.dp))
-                            Text(routine.title)
+        Box {
+            Column(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp)
+            ) {
+                Text("${info.date}", fontWeight = FontWeight.Bold)
+                routines.forEach { routine ->
+                    val dismissState = rememberDismissState(
+                        confirmValueChange = {
+                            if (it == DismissValue.DismissedToStart) {
+                                routines.remove(routine)
+                                true
+                            } else false
                         }
-                    }
-                )
-            }
-            if (routines.isNotEmpty() && routines.all { it.completed }) {
-                KonfettiView(
-                    modifier = Modifier.fillMaxSize(),
-                    parties = listOf(
-                        Party(
-                            speed = 5f,
-                            maxSpeed = 30f,
-                            damping = 0.9f,
-                            spread = 360,
-                            colors = listOf(0xfff44336.toInt(), 0xff4caf50.toInt(), 0xff2196f3.toInt()),
-                            emitter = Emitter(duration = 100L, TimeUnit.MILLISECONDS).perSecond(50),
-                            position = Position.Relative(0.5, 0.0)
-                        )
                     )
-                )
+                    SwipeToDismiss(
+                        state = dismissState,
+                        background = {},
+                        dismissContent = {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier.fillMaxWidth().padding(4.dp)
+                            ) {
+                                Checkbox(
+                                    checked = routine.completed,
+                                    onCheckedChange = { checked -> routine.completed = checked }
+                                )
+                                Spacer(Modifier.width(8.dp))
+                                Text(routine.title)
+                            }
+                        }
+                    )
+                }
             }
+            CelebrationOverlay(show = dayCompleted)
         }
     }
 }
