@@ -17,3 +17,4 @@ rootProject.name = "TrackStack"
 include(":app")
 include(":data")
 include(":po10sync")
+include(":openTrack")

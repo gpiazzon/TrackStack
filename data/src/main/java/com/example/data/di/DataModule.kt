@@ -3,6 +3,7 @@ package com.example.data.di
 import android.content.Context
 import androidx.room.Room
 import com.example.data.Repository
+import com.example.data.Settings
 import com.example.data.TrackStackDatabase
 import dagger.Module
 import dagger.Provides
@@ -27,4 +28,8 @@ object DataModule {
     @Provides
     @Singleton
     fun provideRepository(db: TrackStackDatabase): Repository = Repository(db)
+
+    @Provides
+    @Singleton
+    fun provideSettings(@ApplicationContext context: Context): Settings = Settings(context)
 }
