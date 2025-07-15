@@ -110,11 +110,6 @@ fun BottomNavBar(navController: androidx.navigation.NavHostController) {
 
 
 @Composable
-fun StatsScreen() {
-    Surface { Text("Stats Screen") }
-}
-
-@Composable
 fun SettingsScreen() {
     Surface { Text("Settings Screen") }
 }

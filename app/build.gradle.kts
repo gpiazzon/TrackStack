@@ -45,6 +45,8 @@ dependencies {
     kapt("com.google.dagger:hilt-compiler:2.51")
     implementation("com.github.DanielMartinus:Konfetti:2.0.0")
     implementation("com.google.accompanist:accompanist-reorderable:0.35.0")
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     debugImplementation("androidx.compose.ui:ui-tooling:1.6.1")
     implementation(project(":openTrack"))
     implementation(platform("com.google.firebase:firebase-bom:34.4.0"))
