@@ -21,4 +21,6 @@ dependencies {
     kapt("androidx.room:room-compiler:2.7.0")
     implementation("com.google.dagger:hilt-android:2.51")
     kapt("com.google.dagger:hilt-compiler:2.51")
+    implementation("com.google.firebase:firebase-database-ktx:21.0.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
 }
