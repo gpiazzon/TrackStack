@@ -10,6 +10,7 @@ pluginManagement {
         id("org.jetbrains.kotlin.android") version "2.0.0"
         id("org.jetbrains.kotlin.kapt") version "2.0.0"
         id("dagger.hilt.android.plugin") version "2.51"
+        id("com.google.gms.google-services") version "4.4.1"
     }
 }
 
