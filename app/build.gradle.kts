@@ -3,6 +3,7 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     id("dagger.hilt.android.plugin") version "2.51"
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -46,4 +47,6 @@ dependencies {
     implementation("com.google.accompanist:accompanist-reorderable:0.35.0")
     debugImplementation("androidx.compose.ui:ui-tooling:1.6.1")
     implementation(project(":openTrack"))
+    implementation(platform("com.google.firebase:firebase-bom:34.4.0"))
+    implementation("com.google.firebase:firebase-database-ktx")
 }
