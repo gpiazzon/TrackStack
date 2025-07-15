@@ -45,4 +45,5 @@ dependencies {
     implementation("com.github.DanielMartinus:Konfetti:2.0.0")
     implementation("com.google.accompanist:accompanist-reorderable:0.35.0")
     debugImplementation("androidx.compose.ui:ui-tooling:1.6.1")
+    implementation(project(":openTrack"))
 }
