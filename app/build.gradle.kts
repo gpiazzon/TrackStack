@@ -2,7 +2,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
-    id("com.google.dagger.hilt.android") version "2.51"
+    id("com.google.dagger.hilt.android")
     id("com.google.gms.google-services")
 }
 
@@ -43,12 +43,12 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.google.dagger:hilt-android:2.51")
     kapt("com.google.dagger:hilt-compiler:2.51")
-    implementation("com.github.DanielMartinus:Konfetti:2.0.0")
-    implementation("com.google.accompanist:accompanist-reorderable:0.35.0")
+    implementation("nl.dionsegijn:konfetti-compose:2.0.5")
+    implementation("org.burnoutcrew.composereorderable:reorderable:0.9.6")
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     debugImplementation("androidx.compose.ui:ui-tooling:1.6.1")
     implementation(project(":openTrack"))
-    implementation(platform("com.google.firebase:firebase-bom:34.4.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.16.0"))
     implementation("com.google.firebase:firebase-database-ktx")
 }

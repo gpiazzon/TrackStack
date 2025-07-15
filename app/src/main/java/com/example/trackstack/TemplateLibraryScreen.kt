@@ -21,10 +21,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.google.accompanist.reorderable.detectReorderAfterLongPress
-import com.google.accompanist.reorderable.draggedItem
-import com.google.accompanist.reorderable.rememberReorderableLazyGridState
-import com.google.accompanist.reorderable.reorderable
+import org.burnoutcrew.reorderable.detectReorderAfterLongPress
+import org.burnoutcrew.reorderable.draggedItem
+import org.burnoutcrew.reorderable.rememberReorderableLazyGridState
+import org.burnoutcrew.reorderable.reorderable
 
 // Simple data model representing a routine.
 data class Routine(val id: Int, val title: String, val emoji: String)
