@@ -1,0 +1,4 @@
+version: 1
+tasks:
+  default:
+    - echo "Code-gen only; Gradle runs locally."
