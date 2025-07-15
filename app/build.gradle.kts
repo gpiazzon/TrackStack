@@ -11,7 +11,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.trackstack"
+        applicationId = "com.gpiazzon.trackstack"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
