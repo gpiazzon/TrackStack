@@ -1,7 +1,5 @@
 ﻿# TrackStack
-TrackStack is a minimal multi-module Android project built with Kotlin and Jetpa
-ck Compose. The sample app uses Material 3 and demonstrates dependency injection
- with Hilt.
+TrackStack is a minimal multi-module Android project built with Kotlin and Jetpack Compose. The sample app uses Material 3 and demonstrates dependency injection with Hilt. The `data` module contains a Room database, DAOs and an injectable repository.
 
 ## Modules
 
