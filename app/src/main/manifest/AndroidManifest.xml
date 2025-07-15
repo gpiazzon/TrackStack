@@ -2,6 +2,7 @@
     package="com.example.trackstack">
 
     <application
+        android:name=".TrackStackApplication"
         android:allowBackup="true"
         android:label="TrackStack"
         android:supportsRtl="true"
