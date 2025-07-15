@@ -108,10 +108,6 @@ fun BottomNavBar(navController: androidx.navigation.NavHostController) {
     }
 }
 
-@Composable
-fun CalendarScreen() {
-    Surface { Text("Calendar Screen") }
-}
 
 @Composable
 fun StatsScreen() {
