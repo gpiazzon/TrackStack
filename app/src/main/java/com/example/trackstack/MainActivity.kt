@@ -112,11 +112,6 @@ fun CalendarScreen() {
 }
 
 @Composable
-fun TemplateLibraryScreen() {
-    Surface { Text("Template Library Screen") }
-}
-
-@Composable
 fun StatsScreen() {
     Surface { Text("Stats Screen") }
 }
