@@ -16,9 +16,5 @@ allprojects {
         maven("https://jitpack.io")
     }
 
-    // Unified Java 17 tool-chain for every module
-    extensions.configure<JavaPluginExtension>("java") {
-        toolchain.languageVersion.set(JavaLanguageVersion.of(17))
-    }
 }
 // ───────────────────────────────────────────────────────────────────────────────
