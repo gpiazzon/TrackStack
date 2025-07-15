@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1049982215537",
+    "firebase_url": "https://trackstack-a5a8c-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "trackstack-a5a8c",
+    "storage_bucket": "trackstack-a5a8c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049982215537:android:da97119ecac042fe3b02d0",
+        "android_client_info": {
+          "package_name": "com.gpiazzon.trackstack"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATpC6Z2l5ZV8eJe6LZ-F3X5WyqTfH-Ap8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
