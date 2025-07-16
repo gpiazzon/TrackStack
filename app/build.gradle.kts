@@ -5,6 +5,7 @@ plugins {
     kotlin("plugin.compose")
     id("com.google.dagger.hilt.android")
     id("com.google.gms.google-services")
+    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
