@@ -16,8 +16,6 @@ jobs:
           GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
       - name: Set up Gradle
         uses: gradle/gradle-build-action@v2
-      - name: Generate Wrapper
-        run: gradle wrapper
       - name: Build Debug APK
         run: ./gradlew assembleDebug
       - name: Upload APK
